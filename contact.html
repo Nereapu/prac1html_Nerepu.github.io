@@ -13,9 +13,12 @@
          </header>
 
         <!--formulario-->
+		<!-- se verifica el corecto envio action="#" method="get"-->
         <form action="#" method="get">
 
+		<!--crea un grupo-->
             <fieldset><legend>Información</legend>
+				<!-- formulario de texto-->
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="nombre" placeholder="Pon tú nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]{2,30}" >
             <br>
@@ -31,19 +34,24 @@
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha">
             <br>
+				<!--barra de rango-->
             <label for="rango">Rango:</label>
             <input type="range" id="rango" name="range">
             <br>
+					<!--elegir color-->
             <label for="colors">Color:</label>
             <input type="color" id="colors" name="colors">
             <br>
+				<!--enviar archivo-->
             <label for="archivo">Archivo pdf:</label>
             <input type="file" id="archivo" name="archivo" accept=".pdf">
             <br>
+				<!--enviar mensaje largo-->
             <label for="mensaje">Comentario:</label><br>
             <textarea id="mensaje" name="mensaje" rows="10" cols="30"></textarea>
             <br>
             <p> Genero:</p>
+				<!-- una elepcion circulo-->
             <input type="radio" id="fem" name="genero" value="femenino">
             <label for="fem">Femenino</label> 
 
@@ -53,7 +61,7 @@
             <label for="otro">Otro</label>
             </fieldset>
 
-
+<!-- ______________________________________________-->
 
 		<!--crea un oto grupo-->
             <fieldset><legend>Informcion de pedido</legend>
@@ -71,6 +79,7 @@
             <input type="checkbox" id="bebida" name="tipo">
             <label for="bebida">Bebidas</label>
             <br>
+				<!-- lista despegable sin el tamaño-->
 
             <select id="lugar" name="lugar" >
                 <option value="ma"> Madrid</option>
@@ -83,7 +92,7 @@
             </select>
             <br>
 
-<!--lista desplegable de opciones-->
+<!--lista desplegable de opciones con el tamaño-->
             <select multiple size="8" id="eventos" name="opciones" >
                 <optgroup label="eventos">
                     <option value="Fiestacumple">Fiesta de cumpleaños</option>
