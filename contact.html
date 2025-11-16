@@ -1,16 +1,122 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>Contacto</title>
     </head>
     <body>
+        <header>
         <h1>Contactar</h1>
+         <a href="index.html">Inicio</a> 
+         <a href="content.html">Contenido</a>
+         <a href="contact.html">Contacto</a>
+         </header>
+
+        <!--formulario-->
         <form action="#" method="get">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="name" name="nombre" placeholder="Pon tu nombre">
+
+            <fieldset><legend>Información</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="nombre" placeholder="Pon tú nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]{2,30}" >
+            <br>
+            <label for="email">email:</label>
+            <input type="email" name="email" id="email" placeholder="Pon tú email" required >
+            <br>
+            <label for="numero">Edad</label>
+            <input type="number" id="numero" name="edad"  min="2" max="30">
+            <br>
+            <label for="web">URL:</label>
+            <input type="url" id="web" name="web" minlength="5" maxlength="30">
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br>
+            <label for="rango">Rango:</label>
+            <input type="range" id="rango" name="range">
+            <br>
+            <label for="colors">Color:</label>
+            <input type="color" id="colors" name="colors">
+            <br>
+            <label for="archivo">Archivo pdf:</label>
+            <input type="file" id="archivo" name="archivo" accept=".pdf">
+            <br>
+            <label for="mensaje">Comentario:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="10" cols="30"></textarea>
+            <br>
+            <p> Genero:</p>
+            <input type="radio" id="fem" name="genero" value="femenino">
+            <label for="fem">Femenino</label> 
+
+            <input type="radio" id="masc" name="genero" value="masculino>
+            <label for="masc">Masculino</label>
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label>
+            </fieldset>
 
 
+
+		<!--crea un oto grupo-->
+            <fieldset><legend>Informcion de pedido</legend>
+
+            <p>Comida que quiera pedir</p>
+
+
+<!--opcion multiple cuadrdo-->
+            <input type="checkbox" id="guatita" name="tipo">
+            <label for="guatita">Guatita</label>
+
+            <input type="checkbox" id="caldo" name="tipo">
+            <label for="caldo">Caldo de gallina</label>
+
+            <input type="checkbox" id="bebida" name="tipo">
+            <label for="bebida">Bebidas</label>
+            <br>
+
+            <select id="lugar" name="lugar" >
+                <option value="ma"> Madrid</option>
+                <option value="va">Valencia </option> 
+                <option value="ba"> Barcelona</option>
+                <option value="to"> Toledo</option>
+                <option value="se">Segovia</option>
+                <option value="leo"> León</option>
+
+            </select>
+            <br>
+
+<!--lista desplegable de opciones-->
+            <select multiple size="8" id="eventos" name="opciones" >
+                <optgroup label="eventos">
+                    <option value="Fiestacumple">Fiesta de cumpleaños</option>
+                    <option value="boda">Boda</option>
+                    <option value="comunion">Comuniones</option>
+                    <option value="caterin">Caterin</option>
+                    <option value="Funeral">Funeral</option>
+                    <option value="bautizos" >Bautizos</option>    
+                
+		</optgroup>
+
+		 <optgroup label="otro">
+                    <option value="cumple">cumplepequeño</option>
+                    <option value="prueba">prueba de comida</option>
+                 </optgroup>
+            </select>
+
+            </fieldset>
+            <br>
+
+            <input type="submit" id="Enviar" name="enviar">
+            <input type="reset" id="borrar" name="borrar">
+            
+
+        
+            
         </form>
+
+        <!--Pie de pagina-->
+        <footer>
+           <p><small>@2025-Todos los derechos reservados</small></p>
+            <p><small>Visita <a href="https://www.instagram.com/elnanomadrid/?hl=en">El ñaño</a></small></p>
+
+        </footer>
     </body>
 </html>
